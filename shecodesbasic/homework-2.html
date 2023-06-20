@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <style>
+      .weather__container {
+        text-align: center;
+      }
+
+      .weather__text {
+        color: blue;
+      }
+      .bold {
+        font-size: 22px;
+        font-weight: 900;
+        /*padding-bottom: 25px;*/
+      }
+      .weather__degree {
+        font-size: 20px;
+        font-weight: 200;
+        padding-bottom: 25px;
+      }
+
+      .degree {
+        font-size: 20px;
+        font-weight: 200;
+        padding-bottom: 25px;
+      }
+
+      .bold--2 {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .weather__button {
+        border-radius: 90px;
+        padding: 15px;
+        color: white;
+        background: blue;
+        border: none;
+        font-size: 20px;
+        box-shadow: 5px 5px 10px 5px #888888;
+      }
+      .weather__button:hover {
+        cursor: pointer;
+        background: pink;
+        color: black;
+      }
+
+      .rainy:hover {
+        cursor: pointer;
+        background: pink;
+      }
+      .rainy {
+        /*padding: 15px 0;*/
+        border-radius: 10px;
+        /*transition: all 1s ease-in-out;*/
+        width: 400px;
+        margin: 0 auto;
+      }
+
+      .cloudy:hover {
+        cursor: pointer;
+        background: pink;
+      }
+
+      .cloudy {
+        border-radius: 10px;
+        /*transition: all 1s ease-in-out;*/
+        width: 400px;
+        margin: 0 auto;
+      }
+
+      .sunny--2:hover {
+        cursor: pointer;
+        background-color: pink;
+      }
+
+      .sunny--2 {
+        border-radius: 10px;
+        /*transition: all 1s ease-in-out;*/
+        width: 400px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="weather__container">
+      <h2 class="weather__emoji">&#127780;</h2>
+
+      <h3 class="weather__text">Currently 21&deg; in Tokyo</h3>
+      <h3 class="weather__degree">
+        13&deg; /<span class="bold"> 23&deg;</span>
+      </h3>
+
+      <h3 class="rainy">
+        &#127784; Tomorrow
+        <p class="degree">10&deg; / <span class="bold--2">22&deg;</span></p>
+      </h3>
+
+      <h3 class="cloudy">
+        &#127781;Saturday
+        <p class="degree">15&deg; / 17&deg;</p>
+      </h3>
+
+      <h3 class="sunny--2">
+        &#128262; Sunday
+        <p class="degree">25&deg; / 28&deg;</p>
+      </h3>
+
+      <button class="weather__button">Change city</button>
+
+      <p class="text">Coded by Kofoworola Apanisile</p>
+    </div>
+
+    <script>
+      function changeCity() {
+        let city = prompt("What city do you live in?");
+        let temperature = prompt("What temperature is it?");
+
+        let weatherText = document.querySelector(".weather__text");
+        weatherText.innerHTML =
+          "Currently " + temperature + " &deg; " + " in " + city;
+
+        let weatherEmoji = document.querySelector(".weather__emoji");
+
+        if (temperature > 100) {
+          weatherEmoji.innerHTML = "<span>&#128512;</span>";
+        } else if (temperature < 1) {
+          weatherEmoji.innerHTML = "<span>&#128532;</span>";
+        } else {
+          weatherEmoji.innerHTML = "<span>&#128512;</span>";
+        }
+      }
+      let changeButton = document.querySelector("button");
+
+      changeButton.addEventListener("click", changeCity);
+    </script>
+  </body>
+</html>

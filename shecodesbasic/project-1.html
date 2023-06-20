@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+  </head>
+  <style>
+    .fruit__container {
+      text-align: center;
+      background: linear-gradient(to left bottom, #233142, #455d7a);
+      width: 700px;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      border-radius: 10px;
+    }
+
+    .fruit__title {
+      color: white;
+      text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .fruit__subtext {
+      padding: 20px;
+      font-size: 18px;
+      border-radius: 5px;
+      color: white;
+      text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    hr {
+        color: white;
+        width: 500px;
+    }
+
+    .fruit__design {
+      width: 400px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .about__apples {
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.8;
+      text-align: center;
+      padding: 40px;
+      color: white;
+    }
+
+    a {
+      text-decoration: none;
+      color: #e3e3e3;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-bottom: 20px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .fruit__button {
+      padding: 20px;
+      background:  #455d7a;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+    }
+    .fruit__button:hover {
+      color: #f95959;
+      cursor: pointer;
+      background: #e3e3e3;
+    }
+
+    p {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+  <body>
+    <div class="fruit__container">
+      <h1 class="fruit__title">APPLES!</h1>
+
+      <h2 class="fruit__subtext"><strong>Red Apples Are The Best! &#128536;</strong></h2>
+
+      <hr />
+
+      <img
+        class="fruit__design"
+        src="https://cdn.britannica.com/22/187222-050-07B17FB6/apples-on-a-tree-branch.jpg"
+        alt="picture of an apple"
+      />
+
+      <hr />
+
+      <p class="about__apples">
+        Apples are an incredibly nutritious fruit that offers multiple health
+        benefits. They're rich in fiber and antioxidants. Eating them is linked
+        to a lower risk of many chronic conditions, including diabetes, heart
+        disease, and cancer. Apples may also promote weight loss and improve gut
+        and brain health.
+      </p>
+      <br />
+
+      <a
+        href="https://www.healthline.com/nutrition/10-health-benefits-of-apples#:~:text=Apples%20are%20an%20incredibly%20nutritious,improve%20gut%20and%20brain%20health."
+        target="_blank"
+        >Learn more on healthline</a
+      >
+
+      <br />
+      <br />
+
+      <div>
+        <button class="fruit__button">Get Yours!</button>
+      </div>
+
+      <p>This page was built by Kofoworola Apanisile.</p>
+    </div>
+
+    <script>
+      function apple() {
+        let name = prompt("What is your name?");
+        let email = prompt("Enter your email");
+
+        alert(
+          "Thank you, " +
+            name +
+            "! We'll let you know via your email, in the meantime, enjoy your apples! "
+        );
+      }
+
+      let appleButton = document.querySelector(".fruit__button");
+      appleButton.addEventListener("click", apple);
+    </script>
+  </body>
+</html>
